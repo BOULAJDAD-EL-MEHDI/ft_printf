@@ -3,20 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_uhex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 16:18:57 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/11/11 18:15:50 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/12/09 17:56:43 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	print_char(char m)
-{
-	return (write(1, &m, 1));
-}
+#include "libftprintf.h"
 
 int	ft_print_uhex(unsigned int nbr)
 {

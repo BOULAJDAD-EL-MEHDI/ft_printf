@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 11:27:39 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/11/09 11:29:43 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/12/09 18:02:44 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.c"
+#include "libftprintf.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	size_t	i;
 

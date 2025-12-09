@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_char.c                                       :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 11:09:01 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/11/10 11:48:08 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/12/09 17:51:55 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libftprintf.h"
-#include <stdio.h>
-#include <unistd.h>
-
-int	print_char(char m)
-{
-	return (write(1, &m , 1));
-}
+#include "libftprintf.h"
 
 int	main()
 {

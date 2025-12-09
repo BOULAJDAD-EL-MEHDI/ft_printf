@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 11:12:58 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/11/11 18:25:09 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/12/09 17:56:20 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libftprintf.h"
 
 int	str_len(char *str)
 {
