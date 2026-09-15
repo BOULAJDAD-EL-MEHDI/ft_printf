@@ -16,21 +16,32 @@ int	ft_print_decimal(int nbr)
 {
 	long	nb;
 	int	i;
+	int	written;
 
 	i = 0;
 	nb = nbr;
 	if (nbr < 0)
 	{
-		write(1, "-", 1);
+		if (write(1, "-", 1) != 1)
+			return (-1);
 		nb = -nb;
 		i++;
 	}
 	if (nb > 9)
 	{
-		i += print_int(nb / 10);
-		i += print_char((nb % 10) + '0');
+		written = ft_print_decimal(nb / 10);
+		if (written < 0)
+			return (-1);
+		i += written;
+		if (ft_print_char((nb % 10) + '0') < 0)
+			return (-1);
+		i++;
 	}
 	else
-		i += print_char(nb + '0');
+	{
+		if (ft_print_char(nb + '0') < 0)
+			return (-1);
+		i++;
+	}
 	return (i);
 }

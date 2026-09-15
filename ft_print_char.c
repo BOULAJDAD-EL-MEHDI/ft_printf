@@ -12,13 +12,9 @@
 
 #include "libftprintf.h"
 
-int	main()
+int	ft_print_char(char m)
 {
-	int	i;
-
-	i = print_char("");
-	printf("%d\n", i);
-	i = print_char("%c", "");
-	printf("%d\n", i);
-	return 0;
+	if (write(1, &m, 1) != 1)
+		return (-1);
+	return (1);
 }

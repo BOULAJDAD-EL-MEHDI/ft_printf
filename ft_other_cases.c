@@ -18,6 +18,8 @@ int	ft_other_cases(char m)
 
 	i = 0;
 	i += write(1, "%", 1);
-	i += ft_print_char(m);
+	if (i < 0 || ft_print_char(m) < 0)
+		return (-1);
+	i++;
 	return (i);
 }

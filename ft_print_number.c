@@ -16,22 +16,33 @@ int	ft_print_nomber(int nb)
 {
 	long	nbr;
 	int	len;
+	int	written;
 
 	len = 0;
 	nbr = nb;
 	if (nbr < 0)
 	{
-		write(1, "-", 1);
+		if (write(1, "-", 1) != 1)
+			return (-1);
 		nbr = -nbr;
 		len++;
 	}
 	if (nbr > 9)
 	{
-		len += print_number(nbr / 10);
-		len += print_char((nbr % 10) + '0');
+		written = ft_print_nomber(nbr / 10);
+		if (written < 0)
+			return (-1);
+		len += written;
+		if (ft_print_char((nbr % 10) + '0') < 0)
+			return (-1);
+		len++;
 	}
 	else
-		len += print_char(nbr + '0');
+	{
+		if (ft_print_char(nbr + '0') < 0)
+			return (-1);
+		len++;
+	}
 	return (len);
 }
 

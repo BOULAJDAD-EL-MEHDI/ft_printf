@@ -20,8 +20,10 @@ int	ft_print_lhex(unsigned int nbr)
 	i = 0;
 	base = "0123456789abcdef";
 	if (nbr >= 16)
-		i += print_hex_low(nbr / 16);
-	i += print_char(base[nbr % 16]);
+		i += ft_print_lhex(nbr / 16);
+	if (i < 0 || ft_print_char(base[nbr % 16]) < 0)
+		return (-1);
+	i++;
 	return (i);
 }
 

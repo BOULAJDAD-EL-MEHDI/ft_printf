@@ -20,9 +20,15 @@ int	print_unsigned_decimal(unsigned int nbr)
 	if (nbr > 9)
 	{
 		len += print_unsigned_decimal(nbr / 10);
-		len += print_char((nbr % 10) + '0');
+		if (len < 0 || ft_print_char((nbr % 10) + '0') < 0)
+			return (-1);
+		len++;
 	}
 	else
-		len += print_char(nbr + '0');
+	{
+		if (ft_print_char(nbr + '0') < 0)
+			return (-1);
+		len++;
+	}
 	return (len);
 }

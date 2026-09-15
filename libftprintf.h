@@ -17,13 +17,16 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-int	ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 int	ft_print_char(char m);
 int	ft_print_lhex(unsigned int nbr);
 int	ft_print_decimal(int nbr);
 int	ft_print_uhex(unsigned int nbr);
-int	ft_print_number(int nb);
+int	ft_print_nomber(int nb);
 int	ft_print_pointer(void *val);
 int	ft_print_string(char *str);
+
+int	ft_printf(const char *format, ...);
+int	print_unsigned_decimal(unsigned int nbr);
 
 #endif

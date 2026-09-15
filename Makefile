@@ -18,6 +18,10 @@ FLAGS = -Wall -Wextra -Werror
 
 LIBH = libftprintf.h
 
+SRCS = ft_printf.c ft_print_char.c ft_print_string.c ft_print_decimal.c \
+	print_unsigned_decimal.c ft_print_lhex.c ft_print_uhex.c \
+	ft_print_pointer.c ft_print_number.c ft_other_cases.c ft_strlen.c
+
 
 
 

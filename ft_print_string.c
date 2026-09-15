@@ -33,17 +33,9 @@ int	ft_print_string(char *str)
 	i = 0;
 	while (str[i])
 	{
-		write(1, &str[i], 1);
+		if (write(1, &str[i], 1) != 1)
+			return (-1);
 		i++;
 	}
 	return (len);
-}
-
-int	main()
-{
-	int	i;
-
-	i = print_string(NULL);
-	printf("\nreturn value is : %d", i);
-	return 1;
 }
